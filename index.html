@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>АкваБлеск — Автомойка премиум-класса</title>
+    <meta name="description" content="Профессиональная автомойка АкваБлеск. Бесконтактная мойка, химчистка салона, полировка и детейлинг. Запишитесь онлайн!">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container header__inner">
+            <a href="#hero" class="logo">
+                <span class="logo__icon">💧</span>
+                <span class="logo__text">Аква<span class="logo__accent">Блеск</span></span>
+            </a>
+            <nav class="nav" id="nav">
+                <a href="#services" class="nav__link">Услуги</a>
+                <a href="#pricing" class="nav__link">Цены</a>
+                <a href="#advantages" class="nav__link">Преимущества</a>
+                <a href="#reviews" class="nav__link">Отзывы</a>
+                <a href="#contacts" class="nav__link">Контакты</a>
+            </nav>
+            <a href="tel:+74951234567" class="header__phone">+7 (495) 123-45-67</a>
+            <button class="burger" id="burger" aria-label="Меню">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero" id="hero">
+        <div class="hero__overlay"></div>
+        <div class="container hero__content">
+            <p class="hero__badge">⭐ Работаем с 2010 года</p>
+            <h1 class="hero__title">Чистота вашего авто —<br>наша работа</h1>
+            <p class="hero__subtitle">Профессиональная мойка и детейлинг за 20 минут. Современное оборудование, безопасная химия и команда профессионалов.</p>
+            <div class="hero__actions">
+                <a href="#contacts" class="btn btn--primary">Записаться онлайн</a>
+                <a href="#services" class="btn btn--outline">Наши услуги</a>
+            </div>
+            <div class="hero__stats">
+                <div class="stat">
+                    <span class="stat__num">15 000+</span>
+                    <span class="stat__label">довольных клиентов</span>
+                </div>
+                <div class="stat">
+                    <span class="stat__num">20 мин</span>
+                    <span class="stat__label">средняя мойка</span>
+                </div>
+                <div class="stat">
+                    <span class="stat__num">4.9 ★</span>
+                    <span class="stat__label">рейтинг сервиса</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section class="services section" id="services">
+        <div class="container">
+            <div class="section__head">
+                <p class="section__tag">Что мы предлагаем</p>
+                <h2 class="section__title">Наши услуги</h2>
+                <p class="section__desc">Полный спектр услуг по уходу за вашим автомобилем</p>
+            </div>
+            <div class="services__grid">
+                <article class="service-card">
+                    <div class="service-card__icon">🚿</div>
+                    <h3 class="service-card__title">Бесконтактная мойка</h3>
+                    <p class="service-card__text">Мойка кузова без контакта с поверхностью. Бережно удаляем грязь, не царапая лак.</p>
+                </article>
+                <article class="service-card">
+                    <div class="service-card__icon">🧼</div>
+                    <h3 class="service-card__title">Химчистка салона</h3>
+                    <p class="service-card__text">Глубокая очистка сидений, ковров и пластика. Устраняем пятна и неприятные запахи.</p>
+                </article>
+                <article class="service-card">
+                    <div class="service-card__icon">✨</div>
+                    <h3 class="service-card__title">Полировка кузова</h3>
+                    <p class="service-card__text">Восстанавливаем блеск и убираем мелкие царапины. Защитное покрытие в подарок.</p>
+                </article>
+                <article class="service-card">
+                    <div class="service-card__icon">🛡️</div>
+                    <h3 class="service-card__title">Нанокерамика</h3>
+                    <p class="service-card__text">Защитное керамическое покрытие, которое сохраняет блеск до 12 месяцев.</p>
+                </article>
+                <article class="service-card">
+                    <div class="service-card__icon">🪟</div>
+                    <h3 class="service-card__title">Мойка двигателя</h3>
+                    <p class="service-card__text">Безопасная очистка моторного отсека от грязи и масляных отложений.</p>
+                </article>
+                <article class="service-card">
+                    <div class="service-card__icon">💺</div>
+                    <h3 class="service-card__title">Комплекс «Премиум»</h3>
+                    <p class="service-card__text">Всё включено: мойка, химчистка, полировка и обработка салона за одну цену.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="pricing section section--gray" id="pricing">
+        <div class="container">
+            <div class="section__head">
+                <p class="section__tag">Прозрачные цены</p>
+                <h2 class="section__title">Тарифы</h2>
+                <p class="section__desc">Выберите подходящий пакет услуг</p>
+            </div>
+            <div class="pricing__grid">
+                <div class="price-card">
+                    <h3 class="price-card__name">Эконом</h3>
+                    <div class="price-card__price">от 500 <span>₽</span></div>
+                    <ul class="price-card__list">
+                        <li>Мойка кузова</li>
+                        <li>Сушка</li>
+                        <li>Очистка стёкол</li>
+                        <li>Коврики</li>
+                    </ul>
+                    <a href="#contacts" class="btn btn--outline btn--block">Выбрать</a>
+                </div>
+                <div class="price-card price-card--featured">
+                    <span class="price-card__badge">Популярный</span>
+                    <h3 class="price-card__name">Стандарт</h3>
+                    <div class="price-card__price">от 1 200 <span>₽</span></div>
+                    <ul class="price-card__list">
+                        <li>Всё из «Эконом»</li>
+                        <li>Чернение шин</li>
+                        <li>Полировка кузова воском</li>
+                        <li>Чистка салона пылесосом</li>
+                        <li>Ароматизация</li>
+                    </ul>
+                    <a href="#contacts" class="btn btn--primary btn--block">Выбрать</a>
+                </div>
+                <div class="price-card">
+                    <h3 class="price-card__name">Премиум</h3>
+                    <div class="price-card__price">от 2 800 <span>₽</span></div>
+                    <ul class="price-card__list">
+                        <li>Всё из «Стандарт»</li>
+                        <li>Химчистка салона</li>
+                        <li>Глубокая полировка</li>
+                        <li>Защитное покрытие</li>
+                        <li>Мойка двигателя</li>
+                    </ul>
+                    <a href="#contacts" class="btn btn--outline btn--block">Выбрать</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Advantages -->
+    <section class="advantages section" id="advantages">
+        <div class="container">
+            <div class="section__head">
+                <p class="section__tag">Почему мы</p>
+                <h2 class="section__title">Наши преимущества</h2>
+            </div>
+            <div class="advantages__grid">
+                <div class="advantage">
+                    <div class="advantage__icon">⏱️</div>
+                    <h3 class="advantage__title">Быстро</h3>
+                    <p class="advantage__text">Среднее время мойки — 20 минут. Ценим ваше время.</p>
+                </div>
+                <div class="advantage">
+                    <div class="advantage__icon">🌿</div>
+                    <h3 class="advantage__title">Экологично</h3>
+                    <p class="advantage__text">Используем безопасную химию и систему оборота воды.</p>
+                </div>
+                <div class="advantage">
+                    <div class="advantage__icon">👨‍🔧</div>
+                    <h3 class="advantage__title">Профессионалы</h3>
+                    <p class="advantage__text">Опытная команда с обучением и многолетним стажем.</p>
+                </div>
+                <div class="advantage">
+                    <div class="advantage__icon">💳</div>
+                    <h3 class="advantage__title">Удобная оплата</h3>
+                    <p class="advantage__text">Наличные, карты, СБП и онлайн-оплата при записи.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews -->
+    <section class="reviews section section--gray" id="reviews">
+        <div class="container">
+            <div class="section__head">
+                <p class="section__tag">Отзывы</p>
+                <h2 class="section__title">Что говорят клиенты</h2>
+            </div>
+            <div class="reviews__grid">
+                <article class="review-card">
+                    <div class="review-card__stars">★★★★★</div>
+                    <p class="review-card__text">«Машину помыли идеально, салон как новый. Быстро и недорого. Теперь только сюда!»</p>
+                    <div class="review-card__author">
+                        <span class="review-card__avatar">А</span>
+                        <div>
+                            <strong>Алексей М.</strong>
+                            <span>Toyota Camry</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="review-card">
+                    <div class="review-card__stars">★★★★★</div>
+                    <p class="review-card__text">«Делала химчистку салона после поездки с детьми. Результат превзошёл ожидания, ни следа от пятен.»</p>
+                    <div class="review-card__author">
+                        <span class="review-card__avatar">Е</span>
+                        <div>
+                            <strong>Елена К.</strong>
+                            <span>Kia Sportage</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="review-card">
+                    <div class="review-card__stars">★★★★★</div>
+                    <p class="review-card__text">«Нанесли керамику — кузов блестит уже полгода, грязь почти не липнет. Рекомендую!»</p>
+                    <div class="review-card__author">
+                        <span class="review-card__avatar">Д</span>
+                        <div>
+                            <strong>Дмитрий В.</strong>
+                            <span>BMW X5</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacts / CTA -->
+    <section class="contacts section" id="contacts">
+        <div class="container contacts__inner">
+            <div class="contacts__info">
+                <p class="section__tag">Запись</p>
+                <h2 class="section__title">Запишитесь на мойку</h2>
+                <p class="section__desc">Оставьте заявку — перезвоним в течение 5 минут и подберём удобное время.</p>
+                <ul class="contacts__list">
+                    <li><span>📍</span> г. Москва, ул. Автомобильная, 15</li>
+                    <li><span>🕐</span> Ежедневно с 8:00 до 22:00</li>
+                    <li><span>📞</span> <a href="tel:+74951234567">+7 (495) 123-45-67</a></li>
+                    <li><span>✉️</span> <a href="mailto:info@aquablesk.ru">info@aquablesk.ru</a></li>
+                </ul>
+            </div>
+            <form class="form" id="bookingForm">
+                <h3 class="form__title">Онлайн-запись</h3>
+                <div class="form__field">
+                    <input type="text" name="name" class="form__input" placeholder="Ваше имя" required>
+                </div>
+                <div class="form__field">
+                    <input type="tel" name="phone" class="form__input" placeholder="Телефон" required>
+                </div>
+                <div class="form__field">
+                    <select name="service" class="form__input" required>
+                        <option value="" disabled selected>Выберите услугу</option>
+                        <option>Эконом</option>
+                        <option>Стандарт</option>
+                        <option>Премиум</option>
+                        <option>Химчистка салона</option>
+                        <option>Нанокерамика</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn--primary btn--block">Записаться</button>
+                <p class="form__note">Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности.</p>
+                <p class="form__success" id="formSuccess">✅ Спасибо! Мы свяжемся с вами в ближайшее время.</p>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer__inner">
+            <div class="footer__brand">
+                <a href="#hero" class="logo">
+                    <span class="logo__icon">💧</span>
+                    <span class="logo__text">Аква<span class="logo__accent">Блеск</span></span>
+                </a>
+                <p>Автомойка премиум-класса в Москве. Чистота, скорость, забота о вашем авто.</p>
+            </div>
+            <div class="footer__col">
+                <h4>Меню</h4>
+                <a href="#services">Услуги</a>
+                <a href="#pricing">Цены</a>
+                <a href="#reviews">Отзывы</a>
+                <a href="#contacts">Контакты</a>
+            </div>
+            <div class="footer__col">
+                <h4>Контакты</h4>
+                <a href="tel:+74951234567">+7 (495) 123-45-67</a>
+                <a href="mailto:info@aquablesk.ru">info@aquablesk.ru</a>
+                <span>г. Москва, ул. Автомобильная, 15</span>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <div class="container">
+                <p>© 2026 АкваБлеск. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/74951234567" class="float-btn" aria-label="Написать в WhatsApp" target="_blank" rel="noopener">💬</a>
+
+    <script src="script.js"></script>
+</body>
+</html>

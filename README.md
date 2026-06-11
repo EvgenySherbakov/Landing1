@@ -1,37 +1,74 @@
-# АкваБлеск — лендинг автомойки
+# АкваБлеск — лендинг автомойки (React)
 
-Одностраничный адаптивный сайт (landing page) для автомойки и детейлинга. Чистый HTML/CSS/JS без зависимостей и сборки.
-
-Дизайн построен по методологии скилла **ui-ux-pro-max** (design system → реализация).
+Современный одностраничный лендинг для автомойки и детейлинга на **React + TypeScript + Vite**.
+Дизайн построен по методологии скилла **ui-ux-pro-max**.
 
 ## Дизайн-система
 
-- **Палитра** — Automotive / Premium: тёмно-синий `#1E293B` / `#0F172A` + акцентный красный `#DC2626` на светлом фоне `#F8FAFC`. Цвета вынесены в семантические CSS-переменные.
-- **Типографика** — DM Sans (premium / modern), масштаб через `clamp()`.
-- **Структура** — Hero → Trust bar → Услуги → Цены → Преимущества → Отзывы (social proof) → CTA-форма.
-- **Иконки** — встроенные SVG в стиле Lucide (без эмодзи).
-- **Доступность** — контраст ≥ 4.5:1, видимые focus-states, `aria`-метки, поддержка `prefers-reduced-motion`, валидация формы с фокусом на ошибку.
+- **Стиль** — Modern Dark / Liquid Glass: тёмная тема, glassmorphism, ambient-блобы, мягкое свечение.
+- **Паттерн** — Bento Grid для блока услуг.
+- **Палитра** — глубокий тёмный фон + акценты aqua `#22D3EE` → indigo `#6366F1` (градиент, под бренд «АкваБлеск»).
+- **Типографика** — Inter.
+- **Иконки** — `lucide-react` (SVG, без эмодзи).
+- **Доступность** — focus-states, `aria`-метки, поддержка `prefers-reduced-motion`, адаптив 375 / 768 / 992 / 1200 px.
 
-## Структура файлов
+## Технологии
 
-- `index.html` — разметка
-- `styles.css` — дизайн-токены, стили и адаптив (375 / 768 / 992 px)
-- `script.js` — меню, анимации появления, маска телефона, валидация и отправка формы
+- React 18 + TypeScript
+- Vite 5
+- lucide-react (иконки)
+- Без бэкенда — чистый статический сайт
 
-## Запуск
+## Структура
 
-Откройте `index.html` в браузере или поднимите локальный сервер:
-
-```bash
-python3 -m http.server 8000
+```
+frontend/
+  index.html
+  src/
+    main.tsx
+    App.tsx
+    index.css          # дизайн-токены и все стили
+    data.ts            # услуги, тарифы, отзывы
+    hooks/useReveal.ts # появление при скролле
+    components/        # Header, Hero, Services, Pricing, Advantages, Reviews, Contact, Footer
 ```
 
-Затем перейдите на http://localhost:8000
+## Запуск локально
 
-## Настройка перед публикацией
+```bash
+cd frontend
+npm install
+npm run dev      # http://localhost:5173
+```
 
-- Название и логотип («АкваБлеск»)
-- Телефон `+7 (495) 123-45-67`, e-mail, адрес
-- Ссылку WhatsApp в `index.html`
-- Цены в разделе «Тарифы»
-- Подключите обработку формы к вашему backend/CRM в `script.js` (сейчас — имитация отправки)
+Сборка production:
+
+```bash
+npm run build    # результат в frontend/dist
+npm run preview  # предпросмотр сборки
+```
+
+## Деплой
+
+Публикуется на **GitHub Pages** автоматически через GitHub Actions
+(`.github/workflows/pages.yml`) при пуше в ветку. Сборка идёт с `base=/<repo>/`.
+
+Адрес: **https://evgenysherbakov.github.io/Landing1/**
+
+## Форма записи
+
+Форма работает без бэкенда. Чтобы заявки уходили в вашу систему
+(CRM, Telegram-бот, Formspree и т. п.), задайте переменную окружения при сборке:
+
+```bash
+VITE_BOOKING_ENDPOINT="https://example.com/booking" npm run build
+```
+
+Если переменная не задана — форма показывает подтверждение на клиенте.
+
+## Что заменить перед публикацией
+
+- Название/логотип, телефон, e-mail, адрес
+- Ссылку WhatsApp (`src/App.tsx`)
+- Цены и услуги (`src/data.ts`)
+- Endpoint формы (`VITE_BOOKING_ENDPOINT`)

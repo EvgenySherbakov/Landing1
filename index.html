@@ -3,30 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>АкваБлеск — Автомойка премиум-класса</title>
-    <meta name="description" content="Профессиональная автомойка АкваБлеск. Бесконтактная мойка, химчистка салона, полировка и детейлинг. Запишитесь онлайн!">
+    <title>АкваБлеск — Автомойка и детейлинг премиум-класса в Москве</title>
+    <meta name="description" content="Профессиональная автомойка АкваБлеск: бесконтактная мойка, химчистка салона, полировка и нанокерамика. Запись онлайн за 1 минуту.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <!-- Header -->
     <header class="header" id="header">
         <div class="container header__inner">
-            <a href="#hero" class="logo">
-                <span class="logo__icon">💧</span>
+            <a href="#hero" class="logo" aria-label="АкваБлеск — на главную">
+                <svg class="logo__mark" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z"></path></svg>
                 <span class="logo__text">Аква<span class="logo__accent">Блеск</span></span>
             </a>
-            <nav class="nav" id="nav">
+            <nav class="nav" id="nav" aria-label="Основная навигация">
                 <a href="#services" class="nav__link">Услуги</a>
                 <a href="#pricing" class="nav__link">Цены</a>
                 <a href="#advantages" class="nav__link">Преимущества</a>
                 <a href="#reviews" class="nav__link">Отзывы</a>
                 <a href="#contacts" class="nav__link">Контакты</a>
             </nav>
-            <a href="tel:+74951234567" class="header__phone">+7 (495) 123-45-67</a>
-            <button class="burger" id="burger" aria-label="Меню">
+            <a href="tel:+74951234567" class="header__phone">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                <span>+7 (495) 123-45-67</span>
+            </a>
+            <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false" aria-controls="nav">
                 <span></span><span></span><span></span>
             </button>
         </div>
@@ -34,28 +37,53 @@
 
     <!-- Hero -->
     <section class="hero" id="hero">
-        <div class="hero__overlay"></div>
+        <div class="hero__bg" aria-hidden="true"></div>
         <div class="container hero__content">
-            <p class="hero__badge">⭐ Работаем с 2010 года</p>
-            <h1 class="hero__title">Чистота вашего авто —<br>наша работа</h1>
-            <p class="hero__subtitle">Профессиональная мойка и детейлинг за 20 минут. Современное оборудование, безопасная химия и команда профессионалов.</p>
+            <p class="hero__badge">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                Работаем с 2010 года · рейтинг 4.9
+            </p>
+            <h1 class="hero__title">Идеальная чистота<br>вашего автомобиля</h1>
+            <p class="hero__subtitle">Бесконтактная мойка и детейлинг за 20 минут. Современное оборудование, безопасная химия и команда профессионалов.</p>
             <div class="hero__actions">
                 <a href="#contacts" class="btn btn--primary">Записаться онлайн</a>
-                <a href="#services" class="btn btn--outline">Наши услуги</a>
+                <a href="#services" class="btn btn--ghost">Наши услуги</a>
             </div>
-            <div class="hero__stats">
+            <dl class="hero__stats">
                 <div class="stat">
-                    <span class="stat__num">15 000+</span>
-                    <span class="stat__label">довольных клиентов</span>
+                    <dt class="stat__num">15 000+</dt>
+                    <dd class="stat__label">довольных клиентов</dd>
                 </div>
                 <div class="stat">
-                    <span class="stat__num">20 мин</span>
-                    <span class="stat__label">средняя мойка</span>
+                    <dt class="stat__num">20 мин</dt>
+                    <dd class="stat__label">средняя мойка</dd>
                 </div>
                 <div class="stat">
-                    <span class="stat__num">4.9 ★</span>
-                    <span class="stat__label">рейтинг сервиса</span>
+                    <dt class="stat__num">4.9 / 5</dt>
+                    <dd class="stat__label">рейтинг сервиса</dd>
                 </div>
+            </dl>
+        </div>
+    </section>
+
+    <!-- Trust bar -->
+    <section class="trustbar" aria-label="Гарантии сервиса">
+        <div class="container trustbar__inner">
+            <div class="trustbar__item">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                <span>Гарантия качества</span>
+            </div>
+            <div class="trustbar__item">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                <span>Ежедневно 8:00–22:00</span>
+            </div>
+            <div class="trustbar__item">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect><line x1="1" y1="10" x2="23" y2="10"></line></svg>
+                <span>Оплата картой, СБП, наличными</span>
+            </div>
+            <div class="trustbar__item">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                <span>Бережно к вашему авто</span>
             </div>
         </div>
     </section>
@@ -66,38 +94,50 @@
             <div class="section__head">
                 <p class="section__tag">Что мы предлагаем</p>
                 <h2 class="section__title">Наши услуги</h2>
-                <p class="section__desc">Полный спектр услуг по уходу за вашим автомобилем</p>
+                <p class="section__desc">Полный спектр услуг по уходу за вашим автомобилем — от экспресс-мойки до детейлинга</p>
             </div>
             <div class="services__grid">
                 <article class="service-card">
-                    <div class="service-card__icon">🚿</div>
+                    <div class="service-card__icon">
+                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 16.3c2.2 0 4-1.83 4-4.05 0-1.16-.57-2.26-1.71-3.19S7.29 4.7 7 3c-.29 1.7-1.14 3.13-2.29 4.06S3 11.1 3 12.25c0 2.22 1.8 4.05 4 4.05z"></path><path d="M12.56 6.6A10.97 10.97 0 0 0 14 3.02c.5 2.5 2 4.9 4 6.5s3 3.5 3 5.5a6.98 6.98 0 0 1-11.91 4.97"></path></svg>
+                    </div>
                     <h3 class="service-card__title">Бесконтактная мойка</h3>
                     <p class="service-card__text">Мойка кузова без контакта с поверхностью. Бережно удаляем грязь, не царапая лак.</p>
                 </article>
                 <article class="service-card">
-                    <div class="service-card__icon">🧼</div>
+                    <div class="service-card__icon">
+                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18"></path><path d="M5 21V7l8-4v18"></path><path d="M19 21V11l-6-4"></path><path d="M9 9v.01M9 12v.01M9 15v.01M9 18v.01"></path></svg>
+                    </div>
                     <h3 class="service-card__title">Химчистка салона</h3>
                     <p class="service-card__text">Глубокая очистка сидений, ковров и пластика. Устраняем пятна и неприятные запахи.</p>
                 </article>
                 <article class="service-card">
-                    <div class="service-card__icon">✨</div>
+                    <div class="service-card__icon">
+                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9.5 2 12 7l2.5-5"></path><path d="m5 8 2 4-4 2"></path><path d="m19 8-2 4 4 2"></path><circle cx="12" cy="15" r="6"></circle></svg>
+                    </div>
                     <h3 class="service-card__title">Полировка кузова</h3>
                     <p class="service-card__text">Восстанавливаем блеск и убираем мелкие царапины. Защитное покрытие в подарок.</p>
                 </article>
                 <article class="service-card">
-                    <div class="service-card__icon">🛡️</div>
+                    <div class="service-card__icon">
+                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="m9 12 2 2 4-4"></path></svg>
+                    </div>
                     <h3 class="service-card__title">Нанокерамика</h3>
-                    <p class="service-card__text">Защитное керамическое покрытие, которое сохраняет блеск до 12 месяцев.</p>
+                    <p class="service-card__text">Защитное керамическое покрытие, сохраняющее блеск и гидрофобность до 12 месяцев.</p>
                 </article>
                 <article class="service-card">
-                    <div class="service-card__icon">🪟</div>
+                    <div class="service-card__icon">
+                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 16.5V14a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v2.5"></path><circle cx="9" cy="6" r="3"></circle><path d="M18 9v6"></path><path d="M21 12h-6"></path></svg>
+                    </div>
                     <h3 class="service-card__title">Мойка двигателя</h3>
                     <p class="service-card__text">Безопасная очистка моторного отсека от грязи и масляных отложений.</p>
                 </article>
-                <article class="service-card">
-                    <div class="service-card__icon">💺</div>
+                <article class="service-card service-card--featured">
+                    <div class="service-card__icon">
+                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                    </div>
                     <h3 class="service-card__title">Комплекс «Премиум»</h3>
-                    <p class="service-card__text">Всё включено: мойка, химчистка, полировка и обработка салона за одну цену.</p>
+                    <p class="service-card__text">Всё включено: мойка, химчистка, полировка и обработка салона по выгодной цене.</p>
                 </article>
             </div>
         </div>
@@ -109,7 +149,7 @@
             <div class="section__head">
                 <p class="section__tag">Прозрачные цены</p>
                 <h2 class="section__title">Тарифы</h2>
-                <p class="section__desc">Выберите подходящий пакет услуг</p>
+                <p class="section__desc">Выберите подходящий пакет услуг — без скрытых доплат</p>
             </div>
             <div class="pricing__grid">
                 <div class="price-card">
@@ -117,9 +157,9 @@
                     <div class="price-card__price">от 500 <span>₽</span></div>
                     <ul class="price-card__list">
                         <li>Мойка кузова</li>
-                        <li>Сушка</li>
+                        <li>Сушка кузова</li>
                         <li>Очистка стёкол</li>
-                        <li>Коврики</li>
+                        <li>Чистка ковриков</li>
                     </ul>
                     <a href="#contacts" class="btn btn--outline btn--block">Выбрать</a>
                 </div>
@@ -130,7 +170,7 @@
                     <ul class="price-card__list">
                         <li>Всё из «Эконом»</li>
                         <li>Чернение шин</li>
-                        <li>Полировка кузова воском</li>
+                        <li>Полировка воском</li>
                         <li>Чистка салона пылесосом</li>
                         <li>Ароматизация</li>
                     </ul>
@@ -156,27 +196,35 @@
     <section class="advantages section" id="advantages">
         <div class="container">
             <div class="section__head">
-                <p class="section__tag">Почему мы</p>
+                <p class="section__tag">Почему выбирают нас</p>
                 <h2 class="section__title">Наши преимущества</h2>
             </div>
             <div class="advantages__grid">
                 <div class="advantage">
-                    <div class="advantage__icon">⏱️</div>
+                    <div class="advantage__icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                    </div>
                     <h3 class="advantage__title">Быстро</h3>
                     <p class="advantage__text">Среднее время мойки — 20 минут. Ценим ваше время.</p>
                 </div>
                 <div class="advantage">
-                    <div class="advantage__icon">🌿</div>
+                    <div class="advantage__icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z"></path><path d="M2 21c0-3 1.85-5.36 5.08-6"></path></svg>
+                    </div>
                     <h3 class="advantage__title">Экологично</h3>
-                    <p class="advantage__text">Используем безопасную химию и систему оборота воды.</p>
+                    <p class="advantage__text">Безопасная химия и система оборотного водоснабжения.</p>
                 </div>
                 <div class="advantage">
-                    <div class="advantage__icon">👨‍🔧</div>
+                    <div class="advantage__icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                    </div>
                     <h3 class="advantage__title">Профессионалы</h3>
                     <p class="advantage__text">Опытная команда с обучением и многолетним стажем.</p>
                 </div>
                 <div class="advantage">
-                    <div class="advantage__icon">💳</div>
+                    <div class="advantage__icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="2"></rect><line x1="2" y1="10" x2="22" y2="10"></line></svg>
+                    </div>
                     <h3 class="advantage__title">Удобная оплата</h3>
                     <p class="advantage__text">Наличные, карты, СБП и онлайн-оплата при записи.</p>
                 </div>
@@ -188,12 +236,19 @@
     <section class="reviews section section--gray" id="reviews">
         <div class="container">
             <div class="section__head">
-                <p class="section__tag">Отзывы</p>
-                <h2 class="section__title">Что говорят клиенты</h2>
+                <p class="section__tag">Отзывы клиентов</p>
+                <h2 class="section__title">Нам доверяют</h2>
+                <p class="section__desc">Средняя оценка 4.9 из 5 по более чем 2 000 отзывов</p>
             </div>
             <div class="reviews__grid">
                 <article class="review-card">
-                    <div class="review-card__stars">★★★★★</div>
+                    <div class="review-card__stars" aria-label="Оценка 5 из 5">
+                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                    </div>
                     <p class="review-card__text">«Машину помыли идеально, салон как новый. Быстро и недорого. Теперь только сюда!»</p>
                     <div class="review-card__author">
                         <span class="review-card__avatar">А</span>
@@ -204,7 +259,13 @@
                     </div>
                 </article>
                 <article class="review-card">
-                    <div class="review-card__stars">★★★★★</div>
+                    <div class="review-card__stars" aria-label="Оценка 5 из 5">
+                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                    </div>
                     <p class="review-card__text">«Делала химчистку салона после поездки с детьми. Результат превзошёл ожидания, ни следа от пятен.»</p>
                     <div class="review-card__author">
                         <span class="review-card__avatar">Е</span>
@@ -215,7 +276,13 @@
                     </div>
                 </article>
                 <article class="review-card">
-                    <div class="review-card__stars">★★★★★</div>
+                    <div class="review-card__stars" aria-label="Оценка 5 из 5">
+                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                    </div>
                     <p class="review-card__text">«Нанесли керамику — кузов блестит уже полгода, грязь почти не липнет. Рекомендую!»</p>
                     <div class="review-card__author">
                         <span class="review-card__avatar">Д</span>
@@ -233,37 +300,51 @@
     <section class="contacts section" id="contacts">
         <div class="container contacts__inner">
             <div class="contacts__info">
-                <p class="section__tag">Запись</p>
+                <p class="section__tag">Онлайн-запись</p>
                 <h2 class="section__title">Запишитесь на мойку</h2>
                 <p class="section__desc">Оставьте заявку — перезвоним в течение 5 минут и подберём удобное время.</p>
                 <ul class="contacts__list">
-                    <li><span>📍</span> г. Москва, ул. Автомобильная, 15</li>
-                    <li><span>🕐</span> Ежедневно с 8:00 до 22:00</li>
-                    <li><span>📞</span> <a href="tel:+74951234567">+7 (495) 123-45-67</a></li>
-                    <li><span>✉️</span> <a href="mailto:info@aquablesk.ru">info@aquablesk.ru</a></li>
+                    <li>
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                        г. Москва, ул. Автомобильная, 15
+                    </li>
+                    <li>
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                        Ежедневно с 8:00 до 22:00
+                    </li>
+                    <li>
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                        <a href="tel:+74951234567">+7 (495) 123-45-67</a>
+                    </li>
+                    <li>
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+                        <a href="mailto:info@aquablesk.ru">info@aquablesk.ru</a>
+                    </li>
                 </ul>
             </div>
-            <form class="form" id="bookingForm">
-                <h3 class="form__title">Онлайн-запись</h3>
+            <form class="form" id="bookingForm" novalidate>
+                <h3 class="form__title">Запись за 1 минуту</h3>
                 <div class="form__field">
-                    <input type="text" name="name" class="form__input" placeholder="Ваше имя" required>
+                    <label class="form__label" for="name">Ваше имя <span aria-hidden="true">*</span></label>
+                    <input type="text" id="name" name="name" class="form__input" placeholder="Иван" autocomplete="name" required>
                 </div>
                 <div class="form__field">
-                    <input type="tel" name="phone" class="form__input" placeholder="Телефон" required>
+                    <label class="form__label" for="phone">Телефон <span aria-hidden="true">*</span></label>
+                    <input type="tel" id="phone" name="phone" class="form__input" placeholder="+7 (___) ___-__-__" autocomplete="tel" inputmode="tel" required>
                 </div>
                 <div class="form__field">
-                    <select name="service" class="form__input" required>
-                        <option value="" disabled selected>Выберите услугу</option>
-                        <option>Эконом</option>
-                        <option>Стандарт</option>
-                        <option>Премиум</option>
-                        <option>Химчистка салона</option>
-                        <option>Нанокерамика</option>
+                    <label class="form__label" for="service">Услуга</label>
+                    <select id="service" name="service" class="form__input">
+                        <option value="Стандарт" selected>Стандарт</option>
+                        <option value="Эконом">Эконом</option>
+                        <option value="Премиум">Премиум</option>
+                        <option value="Химчистка салона">Химчистка салона</option>
+                        <option value="Нанокерамика">Нанокерамика</option>
                     </select>
                 </div>
                 <button type="submit" class="btn btn--primary btn--block">Записаться</button>
                 <p class="form__note">Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности.</p>
-                <p class="form__success" id="formSuccess">✅ Спасибо! Мы свяжемся с вами в ближайшее время.</p>
+                <p class="form__success" id="formSuccess" role="status" aria-live="polite">Спасибо! Мы свяжемся с вами в ближайшее время.</p>
             </form>
         </div>
     </section>
@@ -272,19 +353,19 @@
     <footer class="footer">
         <div class="container footer__inner">
             <div class="footer__brand">
-                <a href="#hero" class="logo">
-                    <span class="logo__icon">💧</span>
+                <a href="#hero" class="logo" aria-label="АкваБлеск — на главную">
+                    <svg class="logo__mark" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z"></path></svg>
                     <span class="logo__text">Аква<span class="logo__accent">Блеск</span></span>
                 </a>
-                <p>Автомойка премиум-класса в Москве. Чистота, скорость, забота о вашем авто.</p>
+                <p>Автомойка и детейлинг премиум-класса в Москве. Чистота, скорость и забота о вашем авто.</p>
             </div>
-            <div class="footer__col">
+            <nav class="footer__col" aria-label="Меню в подвале">
                 <h4>Меню</h4>
                 <a href="#services">Услуги</a>
                 <a href="#pricing">Цены</a>
                 <a href="#reviews">Отзывы</a>
                 <a href="#contacts">Контакты</a>
-            </div>
+            </nav>
             <div class="footer__col">
                 <h4>Контакты</h4>
                 <a href="tel:+74951234567">+7 (495) 123-45-67</a>
@@ -299,7 +380,9 @@
         </div>
     </footer>
 
-    <a href="https://wa.me/74951234567" class="float-btn" aria-label="Написать в WhatsApp" target="_blank" rel="noopener">💬</a>
+    <a href="https://wa.me/74951234567" class="float-btn" aria-label="Написать в WhatsApp" target="_blank" rel="noopener">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 0 1 8.413 3.488 11.824 11.824 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 0 0 1.51 5.26l-.999 3.648 3.978-1.044zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"></path></svg>
+    </a>
 
     <script src="script.js"></script>
 </body>
